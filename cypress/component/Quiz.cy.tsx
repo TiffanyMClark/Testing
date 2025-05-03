@@ -1,6 +1,5 @@
 import { mount } from "cypress/react";
 import Quiz from "../../client/src/components/Quiz";
-import React from "react";
 
 describe("Quiz Component", () => {
   beforeEach(() => {

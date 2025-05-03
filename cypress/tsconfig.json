@@ -10,5 +10,6 @@
     "jsx": "react-jsx",
     "strict": true
   },
-  "include": ["**/*.tsx", "**/*.ts", "**/*.js", "**/*.jsx"]
+
+  "include": ["../client/src/components/**/*.tsx", "**/*.ts", "**/*.tsx"]
 }
