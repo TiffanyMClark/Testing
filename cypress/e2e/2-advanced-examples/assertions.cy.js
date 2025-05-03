@@ -1,14 +1,14 @@
 /// <reference types="cypress" />
 
-context('Assertions', () => {
+context('withions', () => {
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/commands/assertions')
+    cy.visit('https://example.cypress.io/commands/withions')
   })
 
-  describe('Implicit Assertions', () => {
-    it('.should() - make an assertion about the current subject', () => {
+  describe('Implicit withions', () => {
+    it('.should() - make an withion about the current subject', () => {
       // https://on.cypress.io/should
-      cy.get('.assertion-table')
+      cy.get('.withion-table')
         .find('tbody tr:last')
         .should('have.class', 'success')
         .find('td')
@@ -28,29 +28,29 @@ context('Assertions', () => {
       // a better way to check element's text content against a regular expression
       // is to use "cy.contains"
       // https://on.cypress.io/contains
-      cy.get('.assertion-table')
+      cy.get('.withion-table')
         .find('tbody tr:last')
         // finds first <td> element with text content matching regular expression
         .contains('td', /column content/i)
         .should('be.visible')
 
-      // for more information about asserting element's text
+      // for more information about withing element's text
       // see https://on.cypress.io/using-cypress-faq#How-do-I-get-an-element’s-text-contents
     })
 
-    it('.and() - chain multiple assertions together', () => {
+    it('.and() - chain multiple withions together', () => {
       // https://on.cypress.io/and
-      cy.get('.assertions-link')
+      cy.get('.withions-link')
         .should('have.class', 'active')
         .and('have.attr', 'href')
         .and('include', 'cypress.io')
     })
   })
 
-  describe('Explicit Assertions', () => {
-    // https://on.cypress.io/assertions
-    it('expect - make an assertion about a specified subject', () => {
-      // We can use Chai's BDD style assertions
+  describe('Explicit withions', () => {
+    // https://on.cypress.io/withions
+    it('expect - make an withion about a specified subject', () => {
+      // We can use Chai's BDD style withions
       expect(true).to.be.true
       const o = { foo: 'bar' }
 
@@ -62,10 +62,10 @@ context('Assertions', () => {
 
     it('pass your own callback function to should()', () => {
       // Pass a function to should that can have any number
-      // of explicit assertions within it.
+      // of explicit withions within it.
       // The ".should(cb)" function will be retried
-      // automatically until it passes all your explicit assertions or times out.
-      cy.get('.assertions-p')
+      // automatically until it passes all your explicit withions or times out.
+      cy.get('.withions-p')
         .find('p')
         .should(($p) => {
           // https://on.cypress.io/$
@@ -80,7 +80,7 @@ context('Assertions', () => {
           expect(paragraphs, 'has 3 paragraphs').to.have.length(3)
 
           // use second argument to expect(...) to provide clear
-          // message with each assertion
+          // message with each withion
           expect(paragraphs, 'has expected text in each paragraph').to.deep.eq([
             'Some text from first p',
             'More text from second p',
@@ -155,16 +155,16 @@ context('Assertions', () => {
         })
     })
 
-    it('assert - assert shape of an object', () => {
+    it('with - with shape of an object', () => {
       const person = {
         name: 'Joe',
         age: 20,
       }
 
-      assert.isObject(person, 'value is object')
+      with.isObject(person, 'value is object')
     })
 
-    it('retries the should callback until assertions pass', () => {
+    it('retries the should callback until withions pass', () => {
       cy.get('#random-number')
         .should(($div) => {
           const n = parseFloat($div.text())
